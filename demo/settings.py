@@ -67,8 +67,11 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 # 指定用来处理数据的 Pipeline 类，后面的数字代表执行顺序,取值范围是  0-1000 range.
 # 数值小的 Pipeline 类优先执行
+# ITEM_PIPELINES = {
+#     'demo.pipelines.DemoPipeline': 300,
+# }
 ITEM_PIPELINES = {
-    'demo.pipelines.DemoPipeline': 300,
+    'demo.mypipelines.IpProxyPipelines.IpProxyPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
