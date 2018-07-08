@@ -6,7 +6,6 @@ import mysql.connector
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-
 class IpProxyPipeline(object):
     def __init__(self):
         self.conn = mysql.connector.connect(user='root', password='123456', database='crawler', )
@@ -20,7 +19,6 @@ class IpProxyPipeline(object):
         is_anonymity = item.get('is_anonymity')
         type = item.get('type')
         time_to_live = item.get('time_to_live')
-
         insert_sql = """
                     insert into ip_proxy(ip, port, server_location, is_anonymity, type,time_to_live)
                     VALUES (%s, %s, %s, %s,%s, %s);
