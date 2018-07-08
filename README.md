@@ -45,7 +45,7 @@ class DemoItem(scrapy.Item):
 ```
 
 ## 五、pipelines数据处理行为
-使用MySQL
+使用MySQL做数据持久化
 ```python
 # -*- coding: utf-8 -*-
 import mysql.connector
