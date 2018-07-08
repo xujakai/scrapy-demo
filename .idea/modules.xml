@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Qiubai.iml" filepath="$PROJECT_DIR$/.idea/Qiubai.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/scrapy-demo.iml" filepath="$PROJECT_DIR$/.idea/scrapy-demo.iml" />
     </modules>
   </component>
 </project>
