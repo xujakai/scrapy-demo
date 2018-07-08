@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for Qiubai project
+# Scrapy settings for demo project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,18 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Qiubai'
+BOT_NAME = 'demo'
 
-SPIDER_MODULES = ['Qiubai.spiders']
-NEWSPIDER_MODULE = 'Qiubai.spiders'
+SPIDER_MODULES = ['demo.spiders']
+NEWSPIDER_MODULE = 'demo.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Qiubai (+http://www.yourdomain.com)'
+#USER_AGENT = 'demo (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 
 # Obey robots.txt rules
-#ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +48,13 @@ NEWSPIDER_MODULE = 'Qiubai.spiders'
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'Qiubai.middlewares.QiubaiSpiderMiddleware': 543,
+#    'demo.middlewares.DemoSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'Qiubai.middlewares.QiubaiDownloaderMiddleware': 543,
+#    'demo.middlewares.DemoDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,9 +65,9 @@ NEWSPIDER_MODULE = 'Qiubai.spiders'
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'Qiubai.pipelines.QiubaiPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#     'demo.pipelines.DemoPipeline': 300,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
