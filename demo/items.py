@@ -20,6 +20,7 @@ class DemoItem(scrapy.Item):
     # 某本书的名字，作者，价格，评分等信息
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class IpInfoItem(scrapy.Item):
@@ -37,3 +38,5 @@ class IpInfoItem(scrapy.Item):
 
 
 >>>>>>> develop
+=======
+>>>>>>> parent of 0fdd74b... ..
