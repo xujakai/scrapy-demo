@@ -2,7 +2,19 @@
 爬虫框架scrapy的示例代码
 本示例爬取代码为豆瓣图书榜单上的数据信息
 
-## 基本结构
+## 一、项目构建
+在命令行下操作
+### 1.1 创建工程
+```bash
+scrapy startproject scrapy-demo
+```
+### 1.2 创建爬虫程序
+进入scrapy-demo目录下
+```bash
+scrapy genspider douban douban.com
+```
+
+## 二、基本结构
 
     scrapy.cfg  项目的配置信息，主要为Scrapy命令行工具提供一个基础的配置信息。（真正爬虫相关的配置信息在settings.py文件中）
     items.py    设置数据存储模板，用于结构化数据，如：Django的Model
@@ -11,10 +23,10 @@
     spiders      爬虫目录，如：创建文件，编写爬虫规则
 
 
-## 1 运行
+## 三、运行
 进入项目目录下运行
     scrapy crawl douban -o bookInfo.csv
-## 2 items数据存储模板
+## 四、items数据存储模板
 
 ```python
 class DemoItem(scrapy.Item):
@@ -29,10 +41,10 @@ class DemoItem(scrapy.Item):
     # 某本书的名字，作者，价格，评分等信息
 ```
 
-## 3 pipelines数据处理行为
+## 五、pipelines数据处理行为
 此处暂时没有使用
 
-## 4 Spider爬虫目录文件
+## 六、Spider爬虫目录文件
 *注意：一般创建爬虫文件时，以网站域名命名*
 
 ```python
@@ -67,19 +79,19 @@ class DoubanDemoSpider(scrapy.Spider):
             yield book
 ```
 
-## 5 settings.py配置信息
+## 七、settings.py配置信息
 
-### 5.1 添加请求头
+### 7.1 添加请求头
 ```python
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 ```
-### 5.2 启用pipelines（本项目暂未使用)
+### 7.2 启用pipelines（本项目暂未使用)
 ```python
 ITEM_PIPELINES = {
     'demo.pipelines.DemoPipeline': 300,
 }
 ```
-### 5.3 是否遵照爬虫协议(修改为false或删除)
+### 7.3 是否遵照爬虫协议(修改为false或删除)
 ```python
 ROBOTSTXT_OBEY = False
 ```
