@@ -19,10 +19,6 @@ class DemoItem(scrapy.Item):
     author = scrapy.Field()
     # 某本书的名字，作者，价格，评分等信息
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 class IpInfoItem(scrapy.Item):
     # define the fields for your item here like:
 
@@ -35,8 +31,3 @@ class IpInfoItem(scrapy.Item):
     time_to_live = scrapy.Field()
     # 某本书的名字，作者，价格，评分等信息
     
-
-
->>>>>>> develop
-=======
->>>>>>> parent of 0fdd74b... ..
