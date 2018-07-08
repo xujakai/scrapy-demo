@@ -21,7 +21,6 @@ class DemoItem(scrapy.Item):
 
 class IpInfoItem(scrapy.Item):
     # define the fields for your item here like:
-
     # name = scrapy.Field()
     ip = scrapy.Field()
     port = scrapy.Field()
@@ -30,4 +29,3 @@ class IpInfoItem(scrapy.Item):
     type = scrapy.Field()
     time_to_live = scrapy.Field()
     # 某本书的名字，作者，价格，评分等信息
-    
