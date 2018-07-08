@@ -20,7 +20,7 @@ NEWSPIDER_MODULE = 'demo.spiders'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -67,8 +67,11 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 # 指定用来处理数据的 Pipeline 类，后面的数字代表执行顺序,取值范围是  0-1000 range.
 # 数值小的 Pipeline 类优先执行
+# ITEM_PIPELINES = {
+#     'demo.pipelines.DemoPipeline': 300,
+# }
 ITEM_PIPELINES = {
-    'demo.pipelines.DemoPipeline': 300,
+    'demo.mypipelines.IpProxyPipelines.IpProxyPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
