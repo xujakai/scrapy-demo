@@ -2,7 +2,6 @@
 import scrapy
 from demo.items import IpInfoItem
 
-
 class IpproxySpider(scrapy.Spider):
     name = 'IpProxy'
     allowed_domains = ['xicidaili.com']
