@@ -14,6 +14,7 @@ BOT_NAME = 'demo'
 SPIDER_MODULES = ['demo.spiders']
 NEWSPIDER_MODULE = 'demo.spiders'
 
+# DOWNLOAD_TIMEOUT = 300
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'demo (+http://www.yourdomain.com)'
@@ -62,6 +63,13 @@ ROBOTSTXT_OBEY = True
 #EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
+DOWNLOADER_MIDDLEWARES = {
+#    'myproxies.middlewares.MyCustomDownloaderMiddleware': 543,
+     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware':None,
+     'demo.Middleware.MyproxiesSpiderMiddleware.ProxyMiddleWare':125,
+     'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware':None
+}
+
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
@@ -72,7 +80,7 @@ ROBOTSTXT_OBEY = True
 # }
 ITEM_PIPELINES = {
     'demo.pipelines.DemoPipeline': 300,
-    'demo.mypipelines.IpProxyPipelines.IpProxyPipeline': 300,
+    # 'demo.mypipelines.IpProxyPipelines.IpProxyPipeline': 300,
  }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
