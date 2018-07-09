@@ -13,16 +13,12 @@ from scrapy import signals
 import scrapy
 from scrapy import log
 
-
-
 class ProxyMiddleWare(object):
     """docstring for ProxyMiddleWare"""
     def __init__(self):
         # 从数据库中加载代理ip
         self.ips = LoadIpUtils.loadIp()
         print('所有可用的ip{}：{}'.format(len(self.ips), self.ips))
-
-
 
     def process_request(self, request, spider):
         '''对request对象加上proxy'''
